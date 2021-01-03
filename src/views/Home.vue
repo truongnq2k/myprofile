@@ -1,18 +1,25 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Banner />
+    <div class="container">
+      <v-alert class="mt-3" outlined type="success" text
+        >Một sản phẩm còn sống còn phải sửa còn phải code... Sản phẩm gọi là
+        xong thì là sản phẩm đã chết, không có khái niệm code xong
+      </v-alert>
+      <Timeline />
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import Timeline from "@/components/Timeline";
+import Banner from "@/components/Banner";
 export default {
   name: "Home",
-  components: {
-    HelloWorld
-  }
+  components: { Timeline, Banner },
+  created() {
+    document.title = "Tdevs by Quang Truong";
+  },
 };
 </script>
