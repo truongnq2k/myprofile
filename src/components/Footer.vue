@@ -1,6 +1,9 @@
 <template>
   <footer class="bg-dark p-4 text-white text-center">
-    <small>2021 - Written by Quang Truong</small>
+    <small
+      >2021 - Written by Quang Truong |
+      <router-link class="about-footer" to="/about">About</router-link></small
+    >
   </footer>
 </template>
 
@@ -22,5 +25,10 @@ export default {};
 .icons a:hover {
   color: white;
   text-shadow: 0 0 30px white;
+}
+.about-footer {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
 </style>
